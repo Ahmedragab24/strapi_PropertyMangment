@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "booking_properties",
+  "info": {
+    "singularName": "booking-property",
+    "pluralName": "booking-properties",
+    "displayName": "bookingProperty",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "property": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::property.property",
+      "private": true
+    },
+    "userName": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "phoneNumber": {
+      "type": "biginteger",
+      "required": true
+    },
+    "checkIn": {
+      "type": "datetime",
+      "required": true
+    },
+    "checkOut": {
+      "type": "datetime",
+      "required": true
+    },
+    "price": {
+      "type": "integer"
+    }
+  }
+}
