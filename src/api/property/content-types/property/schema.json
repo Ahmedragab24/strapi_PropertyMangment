@@ -116,9 +116,9 @@
       ],
       "customField": "plugin::multi-select.multi-select"
     },
-    "landlords": {
+    "landlord": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "manyToOne",
       "target": "api::landlord.landlord",
       "inversedBy": "properties"
     }

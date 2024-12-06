@@ -30,9 +30,9 @@
     },
     "properties": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "oneToMany",
       "target": "api::property.property",
-      "mappedBy": "someValue"
+      "mappedBy": "landlord"
     }
   }
 }

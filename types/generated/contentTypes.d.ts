@@ -432,7 +432,7 @@ export interface ApiLandlordLandlord extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     PhoneNumber: Schema.Attribute.BigInteger & Schema.Attribute.Required;
     properties: Schema.Attribute.Relation<
-      'manyToMany',
+      'oneToMany',
       'api::property.property'
     >;
     publishedAt: Schema.Attribute.DateTime;
@@ -520,10 +520,7 @@ export interface ApiPropertyProperty extends Struct.CollectionTypeSchema {
         number
       > &
       Schema.Attribute.DefaultTo<1>;
-    landlords: Schema.Attribute.Relation<
-      'manyToMany',
-      'api::landlord.landlord'
-    >;
+    landlord: Schema.Attribute.Relation<'manyToOne', 'api::landlord.landlord'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
